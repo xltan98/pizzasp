@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <form data-th-object="${delivery}" method="post" action="/order">
+    <h1>Order Delivery Details</h1>
+    <p>Name:    <Input type="text", data-th-field="*{name}"></p>
+    <span class="error" data-th-if = "${#fields.hasErrors('name')}" data-th-errors="*{name}" style="color:red"></span>
+    <p>Address: <Input type="text", data-th-field="*{address}"></p>
+        <span class="error" data-th-if = "${#fields.hasErrors('address')}" data-th-errors="*{address}" style="color:red"></span>
+    <p>Phone:   <input type="text", data-th-field=*{phone}></p>
+    <span class="error" data-th-if = "${#fields.hasErrors('phone')}" data-th-errors="*{phone}" style="color:red"></span>
+    <p>Rush: <input type="checkbox" data-th-field=*{rush}></p>
+    <p>Comments: <input type="text", data-th-field="*{comments}"></p>
+    <input type="submit" value="Cancel Order" formmethod="get" formaction="/"> <input type="submit" value="submit">
+    </form>
     
 </body>
 </html>

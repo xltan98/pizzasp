@@ -67,10 +67,7 @@
 							</div>
 						</td>
 					</tr>
-					<tr data-th-if="${#fields.hasErrors('pizza')}">
-						<td>
-							<span data-th-errors="*{pizza}" data-th-errorclass="error"></span>
-						</td>
+					<span class="error" data-th-if = "${#fields.hasErrors('pizza')}" data-th-errors="*{pizza}" style="color:red"></span>
 					</tr>
 					<tr>
 						<td>Size:</td>
@@ -83,6 +80,7 @@
 							</select>
 							
 						</td>
+						<span class="error" data-th-if = "${#fields.hasErrors('size')}" data-th-errors="*{size}" style="color:red"></span>
 					</tr>
 					<tr>
 						<td>Quantity:</td>
@@ -90,6 +88,7 @@
 							<input type="number" min="1" name="quantity" data-th-field="*{quantity}"> 
 							
 						</td>
+						<span class="error" data-th-if = "${#fields.hasErrors('quantity')}" data-th-errors="*{quantity}" style="color:red"></span>
 					</tr>
 					<tr>
 						<td></td>
