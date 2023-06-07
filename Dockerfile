@@ -25,7 +25,7 @@ ARG REDISPORT
 ARG REDISUSER
 ARG REDISPASSWORD
 
-COPY --from=build /home/app/target/pizzaapp-0.0.1-SNAPSHOT.jar /usr/local/lib/pizzasp.jar
+COPY --from=build /home/app/target/pizzasp-0.0.1-SNAPSHOT.jar /usr/local/lib/pizzasp.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/usr/local/lib/pizzasp.jar"]
